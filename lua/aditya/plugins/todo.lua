@@ -8,7 +8,7 @@ return {
 		-- NOTE: This is just a note.
 		-- LEFTOFF: This is where I left off.
 
-		-- TODO(travis): This is a travis-specific todo.
+		-- TODO(aditya): This is a travis-specific todo.
 
 		local setup_config = {
 			keywords = {

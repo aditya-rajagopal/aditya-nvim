@@ -4,7 +4,7 @@ return {
 	priority = 1000,
 	opts = {},
 	config = function()
-		vim.cmd[[colorscheme tokyonight-night]]
+		vim.cmd [[colorscheme tokyonight-night]]
 		local tokyo = require('tokyonight').setup({
 			style = 'night',
 			styles = {

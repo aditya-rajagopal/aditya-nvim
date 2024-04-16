@@ -21,7 +21,6 @@ return {
 				fg = new_colors.black,
 			},
 		}
-		
 		require("lualine").setup({
 			options = {
 				theme = lualine_nightfly
