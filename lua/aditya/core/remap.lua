@@ -1,4 +1,26 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.mouse = 'a'
+vim.opt.undofile = true
+vim.opt.signcolumn = 'yes'
+
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+vim.opt.cursorline = true
+
+vim.opt.scrolloff = 12
+
+vim.opt.hlsearch = true
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+-- Expand a split and bring it back
+vim.keymap.set('n', '<leader>=', '<C-w>=')
+vim.keymap.set('n', '<leader>|', '<C-w>|')
+
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -10,7 +32,7 @@ vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 ---- Use LspAttach autocommand to only map the following keys
 ---- after the language server attaches to the current buffer
 vim.api.nvim_create_autocmd('LspAttach', {
-	group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+	group = vim.api.nvim_create_augroup('AdityaLspConfig', {}),
 	callback = function(ev)
 		-- Enable completion triggered by <c-x><c-o>
 		vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
@@ -37,3 +59,12 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		end, opts)
 	end,
 })
+
+vim.api.nvim_create_autocmd('TextYankPost', {
+	desc = 'Highlight when yanking text',
+	group = vim.api.nvim_create_augroup('aditya-highlight-yank', {clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
+
