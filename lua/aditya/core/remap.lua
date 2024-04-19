@@ -10,7 +10,7 @@ vim.opt.signcolumn = 'yes'
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
-vim.opt.cursorline = true
+-- vim.opt.cursorline = true
 
 vim.opt.scrolloff = 12
 
@@ -42,7 +42,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		local opts = { buffer = ev.buf }
 		vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, opts)
 		vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, opts)
-		vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover, opts)
+		vim.keymap.set('n', '<leader>gh', vim.lsp.buf.hover, opts)
 		vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, opts)
 		vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
 		vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
@@ -62,9 +62,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 vim.api.nvim_create_autocmd('TextYankPost', {
 	desc = 'Highlight when yanking text',
-	group = vim.api.nvim_create_augroup('aditya-highlight-yank', {clear = true }),
+	group = vim.api.nvim_create_augroup('aditya-highlight-yank', { clear = true }),
 	callback = function()
 		vim.highlight.on_yank()
 	end,
 })
-
