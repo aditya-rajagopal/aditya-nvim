@@ -9,15 +9,16 @@ return {
 			local config = require("nvim-treesitter.configs")
 
 			config.setup({
-				ensure_installed = { "c", "lua", "cpp", "json", "yaml", "glsl" },
+				ignore_install = {},
+				ensure_installed = { "c", "lua", "cpp", "json", "yaml", "glsl", "python" },
 				sync_install = false,
 				auto_install = true,
 				highlight = { enabled = true },
 				indent = { enabled = true },
 			})
-		end
+		end,
 	},
 	{
-		"nvim-treesitter/playground"
-	}
+		"nvim-treesitter/playground",
+	},
 }
