@@ -29,6 +29,7 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "120"
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.api.nvim_create_user_command("W", "w", {})
 
 -- Expand a split and bring it back
 vim.keymap.set('n', '<leader>=', '<C-w>=')
