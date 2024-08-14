@@ -7,6 +7,7 @@
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
   "conform.nvim": { "branch": "master", "commit": "7a205c944d228ca0a5ec67656f59d20ba11ccca2" },
   "fidget.nvim": { "branch": "main", "commit": "1ba38e4cbb24683973e00c2e36f53ae64da38ef5" },
+  "friendly-snippets": { "branch": "main", "commit": "00ebcaa159e817150bd83bfe2d51fa3b3377d5c4" },
   "gitsigns.nvim": { "branch": "main", "commit": "035da036e68e509ed158414416c827d022d914bd" },
   "harpoon": { "branch": "master", "commit": "ccae1b9bec717ae284906b0bf83d720e59d12b91" },
   "lazy.nvim": { "branch": "main", "commit": "3f13f080434ac942b150679223d54f5ca91e0d52" },
@@ -25,5 +26,6 @@
   "todo-comments.nvim": { "branch": "main", "commit": "defaa49879081eb70bb458dcb4d883a00963184d" },
   "undotree": { "branch": "master", "commit": "56c684a805fe948936cda0d1b19505b84ad7e065" },
   "vim-fugitive": { "branch": "master", "commit": "dac8e5c2d85926df92672bf2afb4fc48656d96c7" },
-  "zig-comp-diag.nvim": { "branch": "main", "commit": "5119311c3fcbfda613895db78558b860b2ad77ec" }
+  "zig-comp-diag.nvim": { "branch": "main", "commit": "5119311c3fcbfda613895db78558b860b2ad77ec" },
+  "zig.vim": { "branch": "master", "commit": "ad75bb5752f3556d8bde5b0e69cb69a98058030e" }
 }

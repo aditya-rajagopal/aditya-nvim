@@ -1,5 +1,5 @@
 function ColorMyPencils(color)
-    color = color or "rose-pine"
+    color = color or "rose-pine-moon"
     vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
@@ -23,7 +23,7 @@ return {
                     ['@lsp.type.comment.cpp'] = { fg = 'muted' },
                 }
             })
-            vim.cmd("colorscheme rose-pine")
+            -- vim.cmd("colorscheme rose-pine")
             ColorMyPencils()
         end
     }
@@ -36,6 +36,8 @@ return {
 --     opts = {},
 --     config = function()
 --         vim.cmd [[colorscheme tokyonight-night]]
+--
+--         ---@diagnostic disable-next-line: missing-fields
 --         require('tokyonight').setup({
 --             style = 'night',
 --             styles = {
@@ -47,6 +49,7 @@ return {
 --                 floats = "dark",
 --             },
 --             transparent = false,
+--             disable_background = true,
 --             terminal_colours = true,
 --         })
 --         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
