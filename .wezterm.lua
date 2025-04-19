@@ -9,7 +9,7 @@ if wezterm.config_builder then
     config = wezterm.config_builder()
 end
 config.font_dirs = { 'fonts' }
--- config.color_scheme = 'Tokyo Night'
+config.color_scheme = 'Tokyo Night'
 
 config.font = wezterm.font("Berkeley Mono Variable", { weight = "Regular", stretch = "Normal", style = "Normal" }) -- C:\USERS\ADIRA\APPDATA\LOCAL\MICROSOFT\WINDOWS\FONTS\BERKELEYMONOVARIABLE-REGULAR.TTF index=0 variation=1, DirectWrite
 config.font_size = 20
