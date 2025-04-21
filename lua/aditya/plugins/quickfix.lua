@@ -7,9 +7,6 @@ return {
 			vim.keymap.set("n", "<C-q>", function()
 				quicker.toggle()
 			end)
-			vim.keymap.set("n", "<leader>l", function()
-				quicker.toggle({ loclist = true })
-			end)
 			quicker.setup({
 				keys = {
 					{
