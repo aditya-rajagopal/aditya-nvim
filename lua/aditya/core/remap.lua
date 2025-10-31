@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
-vim.g.zig_fmt_autosave = 1
+vim.g.zig_fmt_autosave = 0
 vim.g.zig_fmt_parse_errors = 0
 vim.g.have_nerd_font = true
 
@@ -83,10 +83,16 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "[d", function()
-	vim.diagnostic.jump({ diagnostic = vim.diagnostic.get_prev() })
+	local prev = vim.diagnostic.get_prev()
+	if prev ~= nil then
+		vim.diagnostic.jump({ diagnostic = prev })
+	end
 end)
 vim.keymap.set("n", "]d", function()
-	vim.diagnostic.jump({ diagnostic = vim.diagnostic.get_next() })
+	local next = vim.diagnostic.get_next()
+	if next ~= nil then
+		vim.diagnostic.jump({ diagnostic = next })
+	end
 end)
 vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist)
 --

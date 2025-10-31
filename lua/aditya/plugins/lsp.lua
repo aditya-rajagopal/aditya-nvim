@@ -46,7 +46,7 @@ return {
 			capabilities = vim.tbl_deep_extend("force", {}, capabilities, {}),
 			settings = {
 				zls = {
-					-- semantic_tokens = "partial",
+					semantic_tokens = "partial",
 				},
 			},
 		})
